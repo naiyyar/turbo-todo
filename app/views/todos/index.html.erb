@@ -1,0 +1,9 @@
+<div id="form-section">
+  <%= render 'form', todo: (@todo || Todo.new) %>
+</div>
+
+<h1>Todos</h1>
+
+<div id="todos" class="tasks">
+  <%= render partial: 'todo', collection: @todos %>
+</div>

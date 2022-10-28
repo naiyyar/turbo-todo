@@ -1,0 +1,4 @@
+<div id="<%= dom_id todo %>" class="task">
+  <%= todo.title %>
+  <%= button_to "Delete", todo, { method: :delete, class: 'del', form: { data: { turbo_confirm: 'Are you sure?'}}} %>
+</div>

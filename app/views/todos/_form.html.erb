@@ -1,0 +1,8 @@
+<%= turbo_frame_tag 'new_todo', target: '_top' do %>
+  <%= form_with(model: todo) do |form| %>
+    <div class="form">
+      <%= form.text_field :title, class: 'input', placeholder: 'Add a task' %>
+      <%= form.submit 'Add', class: 'add' %>
+    </div>
+  <% end %>
+<%end%>
