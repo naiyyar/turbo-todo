@@ -30,9 +30,13 @@ body {
 .form {
     background-color: #eee;
     border-radius: 6px;
-    padding: 20px;
+    padding: 20px 0px;
     display: flex;
     align-items: center;
+}
+
+#todo-form .form{
+    padding: 20px;
 }
 .input {
     padding: 10px;
@@ -43,7 +47,7 @@ body {
 .input:focus , .add:focus{
     outline: none;
 }
-.add {
+.add, .cancel {
     border: none;
     background-color: #f44336;
     color: white;
@@ -51,10 +55,17 @@ body {
     border-radius: 6px;
     margin-left: 10px;
     cursor: pointer;
+    font-size: 10px;
+}
+.cancel {
+    background-color: #f44336;
+}
+.add {
+    background-color: #365cf4;
 }
 .tasks {
     background-color: #eee;
-    margin-top: 20px;
+    margin-top: 20px 0px;
     border-radius: 6px;
     padding: 15px;
     width: 30%;

@@ -6,6 +6,7 @@
         <%= form.select :status, options_for_select(Todo.statuses.keys, todo.status), {}, {class: 'input'} %>
       <%end%>
       <%= form.submit "#{ todo.new_record? ? 'Add' : 'Update'}", class: 'add' %>
+      <%= link_to 'Cancel', todo_path(todo), class: 'cancel' unless todo.new_record?%>
     </div>
   <% end %>
 <%end%>
