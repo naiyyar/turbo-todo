@@ -78,7 +78,7 @@ body {
     position: absolute;
     content: "";
 }
-.tasks .task span, .tasks .task a, button{ 
+.tasks .task span, button{ 
     font-weight: bold;
     font-size: 10px;
     background-color: red;
@@ -100,4 +100,14 @@ body {
     margin-top: 20px;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.action-links{
+    display: flex;
+    list-style: none;
+    margin: 2px;
+}
+
+.action-links li{
+    margin-left: 10px;
 }
