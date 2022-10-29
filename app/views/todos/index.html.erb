@@ -4,7 +4,7 @@
 
 <div class="flex space-around">
   <div id="draft-todos" class="tasks">
-    <h2>Draft (<span id='todos-counter-draft'><%=@draft_todos.count%></span>)</h2>
+    <h2>Todo (<span id='todos-counter-draft'><%=@draft_todos.count%></span>)</h2>
     <%= render partial: 'todo', collection: @draft_todos %>
   </div>
 
