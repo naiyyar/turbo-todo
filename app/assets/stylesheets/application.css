@@ -19,9 +19,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .container {
+    margin: 20px auto;
+}
+
+#form-section{
     width: 500px;
     margin: 20px auto;
 }
+
 .form {
     background-color: #eee;
     border-radius: 6px;
@@ -51,7 +56,8 @@ body {
     background-color: #eee;
     margin-top: 20px;
     border-radius: 6px;
-    padding: 20px;
+    padding: 15px;
+    width: 30%;
 }
 .tasks .task {
     background-color: white;
@@ -78,7 +84,7 @@ body {
     position: absolute;
     content: "";
 }
-.tasks .task span, button{ 
+.tasks .task button, .status{ 
     font-weight: bold;
     font-size: 10px;
     background-color: red;
@@ -87,6 +93,10 @@ body {
     border-radius: 4px;
     cursor: pointer;
     border: none;
+}
+
+.draft{
+    background-color: #ddd;
 }
 .tasks .task a{text-decoration: none;}
 .delete-all {
@@ -111,3 +121,7 @@ body {
 .action-links li{
     margin-left: 10px;
 }
+.flex{display: flex;}
+.space-between{justify-content: space-between;}
+.space-around{justify-content: space-around;}
+

@@ -4,6 +4,9 @@ class TodosController < ApplicationController
   # GET /todos or /todos.json
   def index
     @todos = Todo.all
+    @draft_todos = @todos.draft
+    @inprogress_todos = @todos.inprogress
+    @completed_todos = @todos.completed
   end
 
   # GET /todos/1 or /todos/1.json
@@ -27,7 +30,7 @@ class TodosController < ApplicationController
       if @todo.save
         format.turbo_stream{
           render turbo_stream: [
-            turbo_stream.prepend(:todos, @todo),
+            turbo_stream.prepend("draft-todos", @todo),
             turbo_stream.update("todos-counter", html: Todo.count)
           ]
         }

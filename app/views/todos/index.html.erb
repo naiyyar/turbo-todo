@@ -2,8 +2,19 @@
   <%= render 'form', todo: (@todo || Todo.new) %>
 </div>
 
-<h1>Todos (<span id='todos-counter'><%=@todos.count%></span>)</h1>
+<div class="flex space-around">
+  <div id="draft-todos" class="tasks">
+    <h2>Draft (<span id='todos-counter-draft'><%=@draft_todos.count%></span>)</h2>
+    <%= render partial: 'todo', collection: @draft_todos %>
+  </div>
 
-<div id="todos" class="tasks">
-  <%= render partial: 'todo', collection: @todos %>
+  <div id="inprogress-todos" class="tasks">
+    <h2>In Progress (<span id='todos-counter-inprogress'><%=@inprogress_todos.count%></span>)</h2>
+    <%= render partial: 'todo', collection: @inprogress_todos %>
+  </div>
+
+  <div id="completed-todos" class="tasks">
+    <h2>Completed (<span id='todos-counter-completed'><%=@completed_todos.count%></span>)</h2>
+    <%= render partial: 'todo', collection: @completed_todos %>
+  </div>
 </div>
