@@ -2,7 +2,7 @@
   <%= render 'form', todo: (@todo || Todo.new) %>
 </div>
 
-<h1>Todos</h1>
+<h1>Todos (<span id='todos-counter'><%=@todos.count%></span>)</h1>
 
 <div id="todos" class="tasks">
   <%= render partial: 'todo', collection: @todos %>

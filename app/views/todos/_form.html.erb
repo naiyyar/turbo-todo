@@ -1,4 +1,4 @@
-<%= turbo_frame_tag 'todo-form' do %>
+<%= turbo_frame_tag "todo-form#{todo.id}" do %>
   <%= form_with(model: todo) do |form| %>
     <div class="form">
       <%= form.text_field :title, class: 'input', placeholder: 'Add a task' %>

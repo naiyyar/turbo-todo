@@ -1,6 +1,9 @@
-<%= turbo_frame_tag 'todo-form' do %>
+<%= turbo_frame_tag "todo-form#{todo.id}" do %>
   <div id="<%= dom_id todo %>" class="task">
-    <%= todo.title %>
+    <div>
+      <%= todo.title %>
+    </div>
+    
     <ul style="display: flex;" class="action-links">
       <li><%= link_to "edit", edit_todo_path(todo)%></li>
       <li><%= button_to "Delete", todo, { method: :delete, class: 'del', form: { data: { turbo_confirm: 'Are you sure?'}}} %></li>
